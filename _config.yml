@@ -1,6 +1,0 @@
-title: Pep's Notes
-description: Backend engineering, distributed systems, and AI-agent practice.
-url: https://zjm168love.github.io
-baseurl: ""
-markdown: kramdown
-permalink: /:year/:month/:day/:title/

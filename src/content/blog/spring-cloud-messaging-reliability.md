@@ -1,6 +1,7 @@
 ---
-layout: post
-title: Spring Cloud 消息可靠性实践笔记
+title: 'Spring Cloud 消息可靠性实践笔记'
+description: '生产确认、消费幂等、死信兜底：Spring Cloud + RabbitMQ 场景下反复验证过的可靠性组合拳。'
+pubDate: '2026-11-01'
 ---
 
 消息中间件"能用"和"可靠"之间隔着不少细节。这里记几条在 Spring Cloud + RabbitMQ 场景里反复验证过的实践。
