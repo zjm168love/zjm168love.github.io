@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import Avatar from '../assets/avatar.png';
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
@@ -6,7 +8,10 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<h2>
-			<a href="/">{SITE_TITLE}</a>
+			<a href="/" class="brand">
+				<Image src={Avatar} width={28} height={28} alt="" class="brand-avatar" />
+				{SITE_TITLE}
+			</a>
 		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">首页</HeaderLink>
@@ -41,6 +46,15 @@ import HeaderLink from './HeaderLink.astro';
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+	}
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+	.brand-avatar {
+		border-radius: 50%;
+		box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
 	}
 	nav {
 		display: flex;

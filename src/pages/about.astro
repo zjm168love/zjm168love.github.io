@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import Avatar from '../assets/avatar.png';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
@@ -6,6 +8,7 @@ import Layout from '../layouts/BlogPost.astro';
 	title="关于"
 	description="我是 Pep，一名深耕 Java 与分布式系统的后端工程师，目前专注于 AI Agent 实践。"
 >
+	<Image src={Avatar} width={148} height={148} alt="Pep 的头像：蓝色机甲机器人" class="portrait" />
 	<p>
 		我是 Pep，一名后端工程师，长期深耕 Java 生态与分布式系统（Spring
 		Cloud、消息队列、搜索），目前在一家大型科技公司负责后端相关研发工作。
@@ -21,3 +24,12 @@ import Layout from '../layouts/BlogPost.astro';
 	</ul>
 	<p>代码与项目见 <a href="https://github.com/zjm168love">GitHub</a>。</p>
 </Layout>
+
+<style>
+	.portrait {
+		display: block;
+		margin: 0 auto 1.5em;
+		border-radius: 50%;
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25), 0 8px 24px rgba(37, 99, 235, 0.18);
+	}
+</style>
